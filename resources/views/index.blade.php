@@ -28,7 +28,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
-
+ 
 </head>
 
 <body>
@@ -111,16 +111,14 @@
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-story" role="tabpanel" aria-labelledby="nav-story-tab">
-                                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
-                                <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit</p>
-                            </div>
+                                <p>ProInvest is more than just a platform. We're a community of passionate crypto enthusiasts, united by the goal of building a *robust and thriving DeFi ecosystem.* Join us and be a part of the future of finance!</p>
+</p>
+                                                         </div>
                             <div class="tab-pane fade" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
-                                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
-                                <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit</p>
+                                <p>Empowering individuals to activate their idle USDT by offering passive income opportunities through USDT liquidity mining. We aim to fuel financial transactions, enabling seamless trading by providing the liquidity necessary to create a bustling marketplace.</p>
                             </div>
                             <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
-                                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
-                                <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit</p>
+                                <p>Revolutionizing the financial landscape by democratizing USDT utilization, fostering a vibrant ecosystem where USDT holders actively engage in generating passive income through liquidity mining. Our vision is to establish a dynamic marketplace where liquidity drives seamless and accessible trading opportunities for everyone.</p>
                             </div>
                         </div>
                     </div>
