@@ -255,22 +255,30 @@
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Services</p>
-                <h1 class="display-5 mb-5">Awesome Financial Services For Business</h1>
+                <h1 class="display-5 mb-5">Awesome Financial Services For Whales</h1>
             </div>
             <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-lg-4">
                     <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
                         <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Financial Planning</h5>
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>⁠Liquidity Provision</h5>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Cash Investment</h5>
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Market Making</h5>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Financial Consultancy</h5>
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Algorithmic Trading Solutions</h5>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Business Loans</h5>
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Analytics and Insights</h5>
+                        </button>
+
+                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Partnerships and Integration</h5>
+                        </button>
+
+                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Risk Management Solutions</h5>
                         </button>
                     </div>
                 </div>
@@ -285,12 +293,14 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                <h3 class="mb-4">Liquidity For Profit</h3>
+                                  
+                                    <p class="mb-4">The core service would involve injecting USDT liquidity into the crypto market. This involves strategically placing USDT reserves into various cryptocurrency pairs, ensuring a more stable and liquid market for those assets.
+</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Safe Handling of USDT assets.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Proper asset match</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Super yielding portfolio</p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -303,12 +313,13 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                    <h3 class="mb-4">Proper Trading Environment</h3>
+                                    <p class="mb-4">Pro Invest Whale offer market-making services, continuously providing buy and sell orders for specific crypto pairs, narrowing spreads, and boosting liquidity. This service can help maintain a healthy trading environment for these assets.
+</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Solid trading tools</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Tracking tools</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Responsive systems</p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -321,12 +332,10 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                    <h3 class="mb-4">Accurate Algorithms</h3>
+                                    <p class="mb-4">Developing algorithms and trading strategies that optimize liquidity provision while mitigating risks. These algorithms could be tailored to adapt to market conditions, ensuring efficient USDT liquidity provision.
+</p>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -339,12 +348,47 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                    <h3 class="mb-4">Analysis & Insights</h3>
+                                    <p class="mb-4">Offering data analytics and insights into the market behavior for both investors and projects. This include trend analysis, volume patterns, and liquidity predictions, enabling better decision-making.
+</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-4">Collaboration & Expansion</h3>
+                                    <p class="mb-4">Collaborating with exchanges and other financial entities to integrate their liquidity services directly into trading platforms. This streamlines access to liquidity for traders using those platforms.
+
+</p>
+                                   
+                                </div>
+                            </div>
+
+
+                            <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-4">Risk Assessment</h3>
+                                    <p class="mb-4">Providing risk assessment tools and strategies to manage volatility and potential downsides associated with adding liquidity to crypto assets.
+
+</p>
+                                   
                                 </div>
                             </div>
                         </div>
