@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('referrer1', 10)->nullable()->comment('1st upline');
             $table->string('referrer2', 11)->nullable()->comment('2nd upline');
             $table->string('referrer3', 11)->nullable()->comment('3rd upline');
-            $table->text('status')->default("ACTIVE");
+            $table->string('status')->default('ACTIVE');
             $table->timestamps();
         });
     }
