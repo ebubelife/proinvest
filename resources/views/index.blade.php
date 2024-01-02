@@ -133,8 +133,8 @@
                                     <i class="fa fa-times text-white"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h4>No Hidden Cost</h4>
-                                    <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                    <h4>No Hidden Fees</h4>
+                                    
                                 </div>
                                 <div class="border-end d-none d-lg-block"></div>
                             </div>
@@ -148,8 +148,8 @@
                                     <i class="fa fa-users text-white"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h4>Dedicated Team</h4>
-                                    <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                    <h4>Dedicated Support</h4>
+                                   
                                 </div>
                                 <div class="border-end d-none d-lg-block"></div>
                             </div>
@@ -163,8 +163,8 @@
                                     <i class="fa fa-phone text-white"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h4>24/7 Available</h4>
-                                    <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                    <h4>Guaranteed & trusted</h4>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -180,30 +180,25 @@
     <div class="container-fluid facts my-5 py-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-users fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Happy Clients</span>
+                    <h1 class="display-4 text-white" data-toggle="">500+</h1>
+                    <span class="fs-5 text-white">Happy Investors</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.3s">
                     <i class="fa fa-check fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Projects Completed</span>
+                    <h1 class="display-4 text-white" data-toggle="">$6m</h1>
+                    <span class="fs-5 text-white">ROI paid out</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Dedicated Staff</span>
+                    <h1 class="display-4 text-white" data-toggle="">A+</h1>
+                    <span class="fs-5 text-white">Outstanding Service</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <i class="fa fa-award fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Awards Achieved</span>
-                    <hr class="bg-white w-25 mx-auto mb-0">
-                </div>
+            
             </div>
         </div>
     </div>
@@ -216,9 +211,9 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Why Choosing Us!</p>
-                    <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
+                    <h1 class="display-5 mb-4">Few Reasons Why Investors Are Choosing Us!</h1>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <a class="btn btn-primary py-3 px-5" href="">Explore More</a>
+                  
                 </div>
                 <div class="col-lg-6">
                     <div class="row g-4 align-items-center">
@@ -227,28 +222,25 @@
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                                     <div class="feature-box border rounded p-4">
                                         <i class="fa fa-check fa-3x text-primary mb-3"></i>
-                                        <h4 class="mb-3">Fast Executions</h4>
-                                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                                        <a class="fw-semi-bold" href="">Read More <i class="fa fa-arrow-right ms-1"></i></a>
-                                    </div>
+                                        <h4 class="mb-3">Maximized Returns</h4>
+                                        <p class="mb-3">ProInvest ensures your USDT doesn't remain stagnant, unlocking opportunities for passive income through liquidity mining. By participating, users can optimize their assets, potentially yielding higher returns compared to traditional methods of asset storage.</p>
+                                          </div>
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                     <div class="feature-box border rounded p-4">
                                         <i class="fa fa-check fa-3x text-primary mb-3"></i>
-                                        <h4 class="mb-3">Guide & Support</h4>
-                                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                                        <a class="fw-semi-bold" href="">Read More <i class="fa fa-arrow-right ms-1"></i></a>
-                                    </div>
+                                        <h4 class="mb-3">Seamless Trading Experience</h4>
+                                        <p class="mb-3">With ProInvest's USDT liquidity mining, users become pivotal in ensuring a fluid marketplace. By providing liquidity, they facilitate efficient transactions, promoting a smoother and more accessible trading experience for all participants.</p>
+                                           </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
                             <div class="feature-box border rounded p-4">
                                 <i class="fa fa-check fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Financial Secure</h4>
-                                <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                                <a class="fw-semi-bold" href="">Read More <i class="fa fa-arrow-right ms-1"></i></a>
-                            </div>
+                                <h4 class="mb-3">Empowerment through Participation</h4>
+                                <p class="mb-3">ProInvest empowers individuals by allowing them to actively engage in the financial ecosystem. Through USDT liquidity mining, users become integral to the financial market's operation, contributing to its vibrancy while reaping rewards for their participation.</p>
+                                  </div>
                         </div>
                     </div>
                 </div>
@@ -418,7 +410,7 @@
 
 
     <!-- Projects Start -->
-    <div class="container-xxl py-5">
+  <!--  <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Projects</p>
@@ -463,7 +455,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Projects End -->
 
 
@@ -533,44 +525,44 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                        ProInvest's liquidity mining truly transformed how I manage my USDT. The passive income I've generated has been a game-changer!
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-1.jpg" alt="">
-                    <h4>Client Name</h4>
-                    <span>Profession</span>
+                    <h4>Sarah h.</h4>
+                   
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text border rounded p-4 pt-5 mb-5">
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                        I was skeptical at first, but ProInvest delivered as promised. My idle USDT now works for me, generating consistent returns effortlessly.
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-2.jpg" alt="">
-                    <h4>Client Name</h4>
-                    <span>Profession</span>
+                    <h4>Dolores T.U</h4>
+                   
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text border rounded p-4 pt-5 mb-5">
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                        Being part of ProInvest's liquidity pool has been rewarding. Their platform makes USDT liquidity mining accessible and lucrative.
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-3.jpg" alt="">
-                    <h4>Client Name</h4>
-                    <span>Profession</span>
+                    <h4>Candace </h4>
+                  
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text border rounded p-4 pt-5 mb-5">
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                        I can vouch for ProInvest! Their USDT liquidity mining not only increased my earnings but also introduced me to a vibrant trading ecosystem.
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-4.jpg" alt="">
-                    <h4>Client Name</h4>
-                    <span>Profession</span>
+                    <h4>Anon.</h4>
+                   
                 </div>
             </div>
         </div>
