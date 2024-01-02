@@ -68,11 +68,11 @@
                             <a href="element.html" class="dropdown-item">Other Elements</a>
                         </div>
                     </div>-->
-                    <a href="{{ route('invest') }}" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Invest</a>
+                    <a href="{{ route('invest') }}" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Invest</a>
                     <a href="{{ route('referrals') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Referrals</a>
                     <a href="{{ route('deposit') }}" class="nav-item nav-link"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
                     <a href="{{ route('withdrawals') }}" class="nav-item nav-link"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
-                    <a href="{{ route('profile') }}" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Profile</a>
+                    <a href="{{ route('profile') }}" class="nav-item nav-link active"><i class="fa fa-user me-2"></i>Profile</a>
 <a href="settings.html" class="nav-item nav-link"><i class="fa fa-cog me-2"></i>Settings</a>
 
                   <!--  <div class="nav-item dropdown">

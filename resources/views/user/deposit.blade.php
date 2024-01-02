@@ -68,10 +68,10 @@
                             <a href="element.html" class="dropdown-item">Other Elements</a>
                         </div>
                     </div>-->
-                    <a href="{{ route('invest') }}" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Invest</a>
+                    <a href="{{ route('invest') }}" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Invest</a>
                     <a href="{{ route('referrals') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Referrals</a>
 
-                    <a href="{{ route('deposit') }}" class="nav-item nav-link"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
+                    <a href="{{ route('deposit') }}" class="nav-item nav-link active"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
                     <a href="{{ route('withdrawals') }}" class="nav-item nav-link"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
                     <a href="{{ route('profile') }}" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Profile</a>
 <a href="settings.html" class="nav-item nav-link"><i class="fa fa-cog me-2"></i>Settings</a>
@@ -219,12 +219,23 @@
 
             <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="bg-white text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Deposit An Amount</h6>
+                <div class="bg-white  rounded p-4">
+                    <div class="d-flex r justify-content-between mb-4">
+                        <h6 class="mb-0">How To Deposit:</h6>
+                       
                        
                     </div>
                    
+
+                    <p>1. Select an asset you would like to purchase and amount and deposit the amount into the wallet address </p>
+
+<p>2. Click the button that says "I have sent the asset to the wallet address" to notify us after you have sent the assets to the wallet address. </p>
+
+<p>3. Your deposit will be verified and your account balance will be credited as soon as we confirm the amount. Please wait while the process is ongoing. </p>
+
+
+<p>4. *Please click the yellow button below , only after you have sent the asset to the CORRECT wallet address.  </p>
+
 
 <div class="container">
   <div class="row text-sm" >
@@ -236,7 +247,7 @@
   <span class="input-group-text" id="basic-addon2">USD</span>
 </div>
 
-<button type="button" style="width:100%"  class="btn btn-info shadow-xl">Deposit</button>
+<button type="button" style="width:100%"  class="btn btn-warning shadow-xl">I have sent the asset to the wallet address</button>
 
 <button type="button" style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Deposit History</button>
 
