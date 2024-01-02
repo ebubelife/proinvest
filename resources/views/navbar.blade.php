@@ -26,7 +26,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Get Started</a>
                         <div class="dropdown-menu border-light m-0">
-                            <a href="{{ route('register') }}" class="dropdown-item">New Member</a>
+                            <a href="{{ route('register') }}" class="dropdown-item">Register</a>
                             <a href="{{ route('login') }}" class="dropdown-item">Login</a>
                           
                         </div>
