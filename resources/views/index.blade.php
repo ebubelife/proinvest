@@ -182,20 +182,20 @@
             <div class="row g-5">
                 <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-users fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="">500+</h1>
-                    <span class="fs-5 text-white">Happy Investors</span>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">8000</h1>
+                    <span class="fs-5 text-white">ACTIVE USERS</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
                 <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.3s">
                     <i class="fa fa-check fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="">$6m</h1>
-                    <span class="fs-5 text-white">ROI paid out</span>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">600000</h1>
+                    <span class="fs-5 text-white">COMPLETED TRADES</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
                 <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="">A+</h1>
-                    <span class="fs-5 text-white">Outstanding Service</span>
+                    <h1 class="display-4 text-white" data-toggle="">11000</h1>
+                    <span class="fs-5 text-white">TOTAL USERS</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
             

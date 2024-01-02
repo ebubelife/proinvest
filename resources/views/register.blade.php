@@ -80,7 +80,7 @@
 
                     <div class="bg-white border rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                            <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">JOIN THE PLATFORM</p>
+                            <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">BECOME A WHALE</p>
                             <h1 class="display-5 mb-5">CREATE ACCOUNT</h1>
 
                             <!-- Display Form Errors -->
