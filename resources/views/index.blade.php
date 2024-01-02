@@ -339,7 +339,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="tab-pane-4">
+                        <div class="tab-pane fade" id="tab-pane-5">
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
@@ -357,7 +357,7 @@
                         </div>
 
 
-                        <div class="tab-pane fade" id="tab-pane-4">
+                        <div class="tab-pane fade" id="tab-pane-6">
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
@@ -373,9 +373,10 @@
                                    
                                 </div>
                             </div>
+</div>
 
 
-                            <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="tab-pane fade" id="tab-pane-7">
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
