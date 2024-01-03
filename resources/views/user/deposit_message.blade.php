@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ session('user_name') }} - Profile </title>
+    <title>{{ session('user_name') }} - Deposit Success</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="Invest, whale, USDT, mining, mining farm, proInvest, network marketing, internet marketing, crypto, bitcoin, ethereum, ethereum mining, liquidity, investment, portfolio, bitcoin investment, invest my bitcoin">
     <meta content="ProInvest is more than just a platform. We're a community of passionate crypto enthusiasts, united by the goal of building a *robust and thriving DeFi ecosystem.* Join us and be a part of the future of finance!
@@ -21,6 +21,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }} " rel="stylesheet">
     <link href="{{ asset( 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
@@ -33,6 +34,24 @@
 </head>
 
 <body>
+
+<!-- Modal -->
+
+<div class="container-gradient modal-gradient" style="">
+<button class="btn btn-default mt-4 text-danger" id="modal-close-btn" style="background-color:white;position:absolute; right:10px ; top:20px;">Close X</button>
+<div class="modal-content-white">
+       <h6>Copy the wallet address below and deposit into it</h6>
+
+       <div class="deposit-wallet-address">
+        <input type="text" class="selectedAsset" value="" placeholder="" name="" />
+
+</div>
+
+<button class="btn btn-primary mt-4 ">Copy</button>
+    </div>
+</div>
+
+
     <div class="container-fluid position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -71,9 +90,10 @@
                     </div>-->
                     <a href="{{ route('invest') }}" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Invest</a>
                     <a href="{{ route('referrals') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Referrals</a>
-                    <a href="{{ route('deposit') }}" class="nav-item nav-link"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
+
+                    <a href="{{ route('deposit') }}" class="nav-item nav-link active"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
                     <a href="{{ route('withdrawals') }}" class="nav-item nav-link"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
-                    <a href="{{ route('profile') }}" class="nav-item nav-link active"><i class="fa fa-user me-2"></i>Profile</a>
+                    <a href="{{ route('profile') }}" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Profile</a>
 <a href="settings.html" class="nav-item nav-link"><i class="fa fa-cog me-2"></i>Settings</a>
 
                   <!--  <div class="nav-item dropdown">
@@ -219,43 +239,81 @@
 
             <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="bg-white text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Your Referrals</h6>
+                <div class="bg-white  rounded p-4">
+                    <div class="d-flex r justify-content-between mb-4">
+                        <h6 class="mb-0">How To Deposit:</h6>
+                       
                        
                     </div>
                    
 
+                    <p>1. Select an asset you would like to purchase and amount and deposit the amount into the wallet address </p>
+
+<p>2. Click the button that says "I have sent the asset to the wallet address" to notify us after you have sent the assets to the wallet address. </p>
+
+<p>3. Your deposit will be verified and your account balance will be credited as soon as we confirm the amount. Please wait while the process is ongoing. </p>
 
 
+<p>4. *Please click the yellow button below , only after you have sent the asset to the CORRECT wallet address.  </p>
 
 
-                    <div class="container">
-  <div class="row">
-    <div class="col-md-4 mb-4">
-      <div class="box">
-      <img src="/img/user-profile-svgrepo-com.svg" class="rounded-circle-ref" alt="icon">
-        <p>--</p>
-      </div>
-    </div>
+<div class="container">
+  <div class="row text-sm" >
+   
 
-    <div class="col-md-4 mb-4">
-      <div class="box">
-        <img src="/img/user-profile-svgrepo-com.svg" class="rounded-circle-ref" alt="icon">
-        <p>--</p>
-      </div>
-    </div>
 
-    <div class="col-md-4 mb-4">
-      <div class="box">
-      <img src="/img/user-profile-svgrepo-com.svg" class="rounded-circle-ref" alt="icon">
-        <p>--</p>
-      </div>
-    </div>
-    <!-- Repeat the above div for each box -->
-  </div>
-  <!-- Create additional rows with the same structure for more boxes -->
+<div class="input-group mb-3 mt-4">
+  <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon2">
+  <span class="input-group-text" id="basic-addon2">USD</span>
 </div>
+
+<h6>Select An Asset & Wallet Address </h6>
+
+
+
+
+    <div class="col-sm-12 col-md-6" style=" " > <div class="dropdown">
+
+<select id="assetSelect" class="form-select" aria-label="Default select example">
+  <option selected>Select An Asset</option>
+  <option value="1">Bitcoin - BTC</option>
+  <option value="2">Ethereum - ETH</option>
+  <option value="2">Tron TRC 20</option>
+  <option value="2">Avalanche</option>
+  <option value="2">Solana</option>
+  <option value="2">BNB</option>
+
+  
+
+ 
+</select>
+
+
+
+<p class="mt-4">Copy wallet address for selected asset below</p>
+<div class="deposit-wallet-address mt-1">
+        <input type="text" class="selectedAsset" value="" placeholder="Wallet Address Will Show Here..." name="" />
+
+</div>
+
+
+
+
+
+<button type="button" style="width:100%"  class="btn btn-warning shadow-xl mt-4">I have sent the asset to the wallet address</button>
+
+<button type="button" style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Deposit History</button>
+
+
+</div>
+    <div class="col-sm-12 col-md-6"> <div class="dropdown">
+ 
+</div>
+   
+  </div>
+
+
+                    </div>
                 </div>
             </div>
             <!-- Recent Sales End -->
@@ -300,6 +358,8 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset( 'js/main_.js') }}"></script>
+
+   
 </body>
 
 </html>
