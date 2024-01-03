@@ -355,7 +355,7 @@
 $(document).ready(function() {
     $('#assetSelect').on('change', function() {
 
-        alert("");
+        
         var selectedOption = $(this).find('option:selected').text();
 
         if(selectedOption =="Bitcoin - BTC"){
