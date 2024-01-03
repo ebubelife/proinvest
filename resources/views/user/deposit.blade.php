@@ -20,6 +20,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }} " rel="stylesheet">
     <link href="{{ asset( 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
@@ -32,6 +33,24 @@
 </head>
 
 <body>
+
+<!-- Modal -->
+
+<div class="container-gradient modal-gradient" style="">
+<button class="btn btn-default mt-4 text-danger" id="modal-close-btn" style="background-color:white;position:absolute; right:10px ; top:20px;">Close X</button>
+<div class="modal-content-white">
+       <h6>Copy the wallet address below and deposit into it</h6>
+
+       <div class="deposit-wallet-address">
+        <input type="text" id="selectedAsset" value="" placeholder="" name="" />
+
+</div>
+
+<button class="btn btn-primary mt-4 ">Copy</button>
+    </div>
+</div>
+
+
     <div class="container-fluid position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -247,7 +266,33 @@
   <span class="input-group-text" id="basic-addon2">USD</span>
 </div>
 
-<button type="button" style="width:100%"  class="btn btn-warning shadow-xl">I have sent the asset to the wallet address</button>
+<h6>Select An Asset & Wallet Address </h6>
+
+
+
+
+    <div class="col-sm-12 col-md-6" style=" " > <div class="dropdown">
+
+<select id="assetSelect" class="form-select" aria-label="Default select example">
+  <option selected>Select An Asset</option>
+  <option value="1">Bitcoin - BTC</option>
+  <option value="2">Ethereum - ETH</option>
+  <option value="2">Tron TRC 20</option>
+  <option value="2">Avalanche</option>
+  <option value="2">Solana</option>
+  <option value="2">BNB</option>
+
+  
+
+ 
+</select>
+
+
+
+
+
+
+<button type="button" style="width:100%"  class="btn btn-warning shadow-xl mt-4">I have sent the asset to the wallet address</button>
 
 <button type="button" style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Deposit History</button>
 
@@ -305,6 +350,61 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset( 'js/main_.js') }}"></script>
+
+    <script>
+$(document).ready(function() {
+    $('#assetSelect').on('change', function() {
+        var selectedOption = $(this).find('option:selected').text();
+
+        if(selectedOption =="Bitcoin - BTC"){
+            $('#selectedAsset').val("bc1qjs56nzaekp44lyuyw9ua8gdgkew5d9ppnzs79s");
+        }
+        else if(selectedOption =="Ethereum - ETH"){
+            $('#selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+        }
+
+        else if(selectedOption =="Tron TRC 20"){
+
+            $('#selectedAsset').val("TPuFQHSyR8qGjABWZfkMnWp8XagYrEEVbS");
+            
+        }
+
+        else if(selectedOption =="Avalanche"){
+
+            $('#selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+
+            
+        }
+
+        else if(selectedOption =="Solana"){
+
+            $('#selectedAsset').val("8WzxiqZ8Fwx9LeggZ4DJ9mq2t9WzTYvbx4j3ujRWDk97");
+
+        }
+
+        else if(selectedOption =="BNB"){
+
+            $('#selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+
+            
+        }
+
+
+       
+        $(".modal-gradient").show();
+        $(".modal-gradient").css("display","flex");
+
+    });
+
+    $("#modal-close-btn").on('click', function(){
+
+       $(".modal-gradient").hide();
+
+
+    });
+});
+
+</script>
 </body>
 
 </html>

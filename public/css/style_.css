@@ -299,3 +299,28 @@
     height: 40px; width: 40px;
   }
   
+  .container-gradient{
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height:100%; width:100%; z-index:1000000; position:absolute; background-color:rgba(68, 68, 68, 0.6);
+
+  }
+
+  .modal-content-white {
+    height:300px; width:600px;
+    background-color:rgba(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:10px;
+    padding-left:10px;
+}
+
+.deposit-wallet-address input{
+
+    width:100%; padding:6px; text-align:center;  border-radius: 8px;  border:1px solid #cccccc; margin-top: 10px;
+}
