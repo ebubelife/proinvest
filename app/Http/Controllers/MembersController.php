@@ -6,6 +6,7 @@ use App\Models\Members;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Cookie;
 class MembersController extends Controller
 {
    
@@ -158,6 +159,8 @@ class MembersController extends Controller
          Session::put('user_ref', $user->referral_code);
          Session::put('deposit_balance', $user->deposit_balance);
          Session::put('ref_balance', $user->ref_balance);
+
+         Cookie::queue('user_id', 'user_id', 7000);
          
 
          session()->flash('success', 'Account created successfully!');

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ session('user_name') }} - Deposit Success</title>
+    <title>{{ session('user_name') }} - Deposit History</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="Invest, whale, USDT, mining, mining farm, proInvest, network marketing, internet marketing, crypto, bitcoin, ethereum, ethereum mining, liquidity, investment, portfolio, bitcoin investment, invest my bitcoin">
     <meta content="ProInvest is more than just a platform. We're a community of passionate crypto enthusiasts, united by the goal of building a *robust and thriving DeFi ecosystem.* Join us and be a part of the future of finance!
@@ -230,29 +230,66 @@
                    
 
 
-                @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
+
+
+ <!-- Recent Sales Start -->
+
+
+
+ <div class="container-fluid pt-4 px-4">
+                <div class="bg-light text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Deposit History</h6>
+                       
+                    </div>
+
+
+                    @if (count($transactions) == 0)
+
+<p style="text-align:center">No deposits yet</p>
+<p style="text-align:center; font-size:20px"> <a href="{{ route('deposit') }}" class="btn btn-primary">Deposit </a></p>
+
+
 @endif
 
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
 
+                    @if (count($transactions) > 0)
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-dark">
+                                      <th scope="col">Date</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Asset</th>
+                                    <th scope="col">status</th>
+                                    
+                                    <th scope="col">type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
+                            @foreach ($transactions as $transaction)
+                            <tr>
+                                      <td>{{ \Carbon\Carbon::parse($transaction->created_at)->isoFormat('DD MMMM YYYY H:m') }}</td>
+                                    <td>{{ $transaction->amount }}</td>
+                                    <td>{{ $transaction->asset }}</td>
+                                    <td>{{ $transaction->status }}</td>
+                                    <td>{{ $transaction->type }}</td>
+                                   
+                                </tr>
+                                
+                            @endforeach
+                               
+                              
+                             
+                            </tbody>
+                        </table>
+                    </div>
 
-
-<p style="text-align:center; font-size:20px"> Your transaction is currently processing. Please wait while we credit your wallet </p>
-
-
-<p style="text-align:center; font-size:20px"> <a href="{{ route('admin') }}" class="btn btn-primary">Back To Dashboard </a></p>
+                    @endif
+                </div>
+            </div>
+            <!-- Recent Sales End -->
 
 
 </div>

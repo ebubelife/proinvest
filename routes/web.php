@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MembersController;
+use App\Http\Controllers\TransactionsController;
 use Illuminate\Support\Facades\Session;
 use App\Models\Members;
+use App\Models\Transactions;
 
 /*
 |--------------------------------------------------------------------------
@@ -111,6 +113,15 @@ Route::get('/user/profile', function () {
     return view('/user/profile');
 })->name('profile');
 
+Route::get('/user/deposit/success', function () {
+    return view('/user/deposit_message');
+})->name('deposit_success');
+
+Route::get('/user/deposit/history', function () {
+    $transactions = Transactions::where("user_id", "18")->where("type", "DEPOSIT")->get();
+    return view('user.deposit_history', ['transactions' => $transactions]);
+})->name('deposit_history');
+
 
 
 Route::get('/ref/{ref_code}', function ($ref_code) {
@@ -124,6 +135,8 @@ Route::get('/ref/{ref_code}', function ($ref_code) {
 
 
 Route::post( '/add_member', [MembersController::class, 'addMember'])->name('add_member');
+
+Route::post( '/submit_deposit', [TransactionsController::class, 'deposit'])->name('submit_deposit');
 
 
 Route::post( '/login', [MembersController::class, 'login'])->name('login');

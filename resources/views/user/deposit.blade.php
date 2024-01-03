@@ -43,7 +43,7 @@
        <h6>Copy the wallet address below and deposit into it</h6>
 
        <div class="deposit-wallet-address">
-        <input type="text" class="selectedAsset" value="" placeholder="" name="" />
+        <input type="text" class="selectedAsset" value="bc1qjs56nzaekp44lyuyw9ua8gdgkew5d9ppnzs79s" placeholder="" name="" />
 
 </div>
 
@@ -260,10 +260,29 @@
 <div class="container">
   <div class="row text-sm" >
    
+  <form method="POST" action="{{ route('submit_deposit') }}">
+                    @csrf <!-- Laravel CSRF protection token -->
 
+
+                                                <!-- Display Form Errors -->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif 
 
 <div class="input-group mb-3 mt-4">
-  <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon2">
+  <input type="number" class="form-control" placeholder="Amount" aria-label="Amount" name="amount" aria-describedby="basic-addon2">
   <span class="input-group-text" id="basic-addon2">USD</span>
 </div>
 
@@ -274,14 +293,14 @@
 
     <div class="col-sm-12 col-md-6" style=" " > <div class="dropdown">
 
-<select id="assetSelect" class="form-select" aria-label="Default select example">
-  <option selected>Select An Asset</option>
-  <option value="1">Bitcoin - BTC</option>
-  <option value="2">Ethereum - ETH</option>
-  <option value="2">Tron TRC 20</option>
-  <option value="2">Avalanche</option>
-  <option value="2">Solana</option>
-  <option value="2">BNB</option>
+<select id="assetSelect" name="asset-selected" class="form-select" aria-label="Default select example">
+
+  <option selected value="BTC">Bitcoin - BTC</option>
+  <option value="ETH">Ethereum - ETH</option>
+  <option value="TRC">Tron TRC 20</option>
+  <option value="AVALANCHE">Avalanche</option>
+  <option value="SOL">Solana</option>
+  <option value="BNB">BNB</option>
 
   
 
@@ -292,7 +311,20 @@
 
 <p class="mt-4">Copy wallet address for selected asset below</p>
 <div class="deposit-wallet-address mt-1">
-        <input type="text" class="selectedAsset" value="" placeholder="Wallet Address Will Show Here..." name="" />
+        <input type="text" class="selectedAsset" value="bc1qjs56nzaekp44lyuyw9ua8gdgkew5d9ppnzs79s" placeholder="Wallet Address Will Show Here..." name="wallet-address" />
+
+</div>
+
+
+<div class="user_id mt-1" style="display:none">
+        <input type="text" class="selectedAsset" value="{{ session('user_id') }}" placeholder="user id" name="user_id" />
+
+</div>
+
+
+<p class="mt-4">Paste transaction hash below</p>
+<div class="deposit-hash mt-1">
+        <input type="text" class="depositHash" value="" placeholder="Paste Hash..." name="transaction-hash" />
 
 </div>
 
@@ -300,9 +332,13 @@
 
 
 
-<button type="button" style="width:100%"  class="btn btn-warning shadow-xl mt-4">I have sent the asset to the wallet address</button>
 
-<button type="button" style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Deposit History</button>
+
+<button type="submit" style="width:100%"  class="btn btn-warning shadow-xl mt-4">Submit</button>
+
+
+</form>
+<a href="{{route('deposit_history')}}" type="button" style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Deposit History</a>
 
 
 </div>
@@ -368,20 +404,25 @@ $(document).ready(function() {
 
         if(selectedOption =="Bitcoin - BTC"){
             $('.selectedAsset').val("bc1qjs56nzaekp44lyuyw9ua8gdgkew5d9ppnzs79s");
+
+            $('.asset_currency').val("BTC");
         }
         else if(selectedOption =="Ethereum - ETH"){
             $('.selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+            $('.asset_currency').val("ETH");
         }
 
         else if(selectedOption =="Tron TRC 20"){
 
             $('.selectedAsset').val("TPuFQHSyR8qGjABWZfkMnWp8XagYrEEVbS");
+            $('.asset_currency').val("TRC");
             
         }
 
         else if(selectedOption =="Avalanche"){
 
-            $('#selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+            $('.selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+            $('.asset_currency').val("AVALANCHE");
 
             
         }
@@ -389,26 +430,28 @@ $(document).ready(function() {
         else if(selectedOption =="Solana"){
 
             $('.selectedAsset').val("8WzxiqZ8Fwx9LeggZ4DJ9mq2t9WzTYvbx4j3ujRWDk97");
+            $('.asset_currency').val("SOL");
 
         }
 
         else if(selectedOption =="BNB"){
 
             $('.selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+            $('.asset_currency').val("BNB");
 
             
         }
 
 
        
-        $(".modal-gradient").show();
-        $(".modal-gradient").css("display","flex");
+      //  $(".modal-gradient").show();
+       // $(".modal-gradient").css("display","flex");
 
     });
 
     $("#modal-close-btn").on('click', function(){
 
-       $(".modal-gradient").hide();
+     //  $(".modal-gradient").hide();
 
 
     });
