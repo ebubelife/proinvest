@@ -42,7 +42,7 @@
        <h6>Copy the wallet address below and deposit into it</h6>
 
        <div class="deposit-wallet-address">
-        <input type="text" id="selectedAsset" value="" placeholder="" name="" />
+        <input type="text" class="selectedAsset" value="" placeholder="" name="" />
 
 </div>
 
@@ -289,6 +289,13 @@
 
 
 
+<p class="mt-4">Copy wallet address for selected asset below</p>
+<div class="deposit-wallet-address mt-1">
+        <input type="text" class="selectedAsset" value="" placeholder="Wallet Address Will Show Here..." name="" />
+
+</div>
+
+
 
 
 
@@ -359,15 +366,15 @@ $(document).ready(function() {
         var selectedOption = $(this).find('option:selected').text();
 
         if(selectedOption =="Bitcoin - BTC"){
-            $('#selectedAsset').val("bc1qjs56nzaekp44lyuyw9ua8gdgkew5d9ppnzs79s");
+            $('.selectedAsset').val("bc1qjs56nzaekp44lyuyw9ua8gdgkew5d9ppnzs79s");
         }
         else if(selectedOption =="Ethereum - ETH"){
-            $('#selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+            $('.selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
         }
 
         else if(selectedOption =="Tron TRC 20"){
 
-            $('#selectedAsset').val("TPuFQHSyR8qGjABWZfkMnWp8XagYrEEVbS");
+            $('.selectedAsset').val("TPuFQHSyR8qGjABWZfkMnWp8XagYrEEVbS");
             
         }
 
@@ -380,13 +387,13 @@ $(document).ready(function() {
 
         else if(selectedOption =="Solana"){
 
-            $('#selectedAsset').val("8WzxiqZ8Fwx9LeggZ4DJ9mq2t9WzTYvbx4j3ujRWDk97");
+            $('.selectedAsset').val("8WzxiqZ8Fwx9LeggZ4DJ9mq2t9WzTYvbx4j3ujRWDk97");
 
         }
 
         else if(selectedOption =="BNB"){
 
-            $('#selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
+            $('.selectedAsset').val("0x076E22EF70DcE20D328C8D75AECd7d46c12354eE");
 
             
         }
