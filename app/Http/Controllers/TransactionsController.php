@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transactions;
+use App\Models\Members;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -31,6 +32,8 @@ class TransactionsController extends Controller
         
         ]);
 
+
+
        // $user_id = Session::put('user_id');
 
 
@@ -53,6 +56,22 @@ class TransactionsController extends Controller
         ]);
 
         if($newTransaction){
+
+            $userToUpdate= Members::find($validatedData['user_id']);
+
+            if ($userToUpdate) {
+                // Update the deposit_balance column
+                $current_deposit_balance = $userToUpdate->deposit_balance;
+                $newDepositBalance = 500; // Replace this with the new deposit balance value
+                $userToUpdate->deposit_balance = intval($validatedData['amount']) + intval($current_deposit_balance);
+                $userToUpdate->save();
+            
+             
+            } else {
+                session()->flash('error', 'Your transaction is processing...');
+    
+            return redirect()->route('An error occured');
+            }
 
             session()->flash('success', 'Your transaction is processing...');
     

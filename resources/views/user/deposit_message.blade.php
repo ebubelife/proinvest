@@ -254,6 +254,8 @@
 
 <p style="text-align:center; font-size:20px"> <a href="{{ route('admin') }}" class="btn btn-primary">Back To Dashboard </a></p>
 
+<p style="text-align:center; font-size:20px"> <a href="{{ route('deposit') }}" class="btn btn-warning">Back To Deposit </a></p>
+
 
 </div>
 
