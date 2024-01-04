@@ -245,7 +245,7 @@
 
 
 </form>
-<a href=""  style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Withdrawal History</a>
+<a href="{{ route('withdrawal_history') }}"  style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Withdrawal History</a>
 
 
 </div>

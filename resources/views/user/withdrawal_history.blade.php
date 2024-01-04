@@ -78,8 +78,8 @@
                     <a href="{{ route('invest') }}" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Invest</a>
                     <a href="{{ route('referrals') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Referrals</a>
 
-                    <a href="{{ route('deposit') }}" class="nav-item nav-link active"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
-                    <a href="{{ route('withdrawals') }}" class="nav-item nav-link"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
+                    <a href="{{ route('deposit') }}" class="nav-item nav-link "><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
+                    <a href="{{ route('withdrawals') }}" class="nav-item nav-link active"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
                     <a href="{{ route('profile') }}" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Profile</a>
 <a href="settings.html" class="nav-item nav-link"><i class="fa fa-cog me-2"></i>Settings</a>
 
@@ -239,14 +239,14 @@
  <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Deposit History</h6>
+                        <h6 class="mb-0">Withdrawal History</h6>
                        
                     </div>
 
 
                     @if (count($transactions) == 0)
 
-<p style="text-align:center">No deposits yet</p>
+<p style="text-align:center">No Records</p>
 <p style="text-align:center; font-size:20px"> <a href="{{ route('deposit') }}" class="btn btn-primary">Deposit </a></p>
 
 
@@ -260,7 +260,7 @@
                                 <tr class="text-dark">
                                       <th scope="col">Date</th>
                                     <th scope="col">Amount</th>
-                                    <th scope="col">Asset</th>
+                                  
                                     <th scope="col">status</th>
                                     
                                     <th scope="col">type</th>
@@ -272,7 +272,7 @@
                             <tr>
                                       <td>{{ \Carbon\Carbon::parse($transaction->created_at)->isoFormat('DD MMMM YYYY H:m') }}</td>
                                     <td>{{ $transaction->amount }}</td>
-                                    <td>{{ $transaction->asset }}</td>
+                                  
                                     <td>{{ $transaction->status }}</td>
                                     <td>{{ $transaction->type }}</td>
                                    
