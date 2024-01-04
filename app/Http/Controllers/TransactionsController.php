@@ -62,7 +62,7 @@ class TransactionsController extends Controller
             if ($userToUpdate) {
                 // Update the deposit_balance column
                 $current_deposit_balance = $userToUpdate->deposit_balance;
-                $newDepositBalance = 500; // Replace this with the new deposit balance value
+              //  $newDepositBalance = 500; // Replace this with the new deposit balance value
                 $userToUpdate->deposit_balance = intval($validatedData['amount']) + intval($current_deposit_balance);
                 $userToUpdate->save();
             
@@ -149,8 +149,9 @@ class TransactionsController extends Controller
            
           // return redirect()->route('withdrawals');
 
-           return redirect()->route('withdrawals')->withErrors(['failed1', 'An error occured']);
-}
+           return redirect()->route('withdrawals')->withErrors([ 'An error occured']);
+
+        }
 
 
     

@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\TransactionsController;
+use App\Http\Controllers\InvestmentController;
 use Illuminate\Support\Facades\Session;
 use App\Models\Members;
 use App\Models\Transactions;
+
+
 use App\Http\Middleware\CheckLoggedIn;
 
 /*
@@ -80,7 +83,16 @@ Route::get('/plans', function () {
 
 
 Route::get('/user/invest', function () {
-    return view('/user/invest');
+
+    $user_id = Session::get("user_id");
+    $curr_user = Members::find($user_id);
+
+    $total_balance = intval($curr_user->deposit_balance) + intval($curr_user->balance) + intval($curr_user->ref_balance);
+
+    
+   
+
+    return view('/user/invest', ['total_balance'=>$total_balance]);
 })->name('invest')->middleware(CheckLoggedIn::class);
 
 
@@ -162,5 +174,5 @@ Route::post( '/submit_withdrawal', [TransactionsController::class, 'withdrawal']
 
 Route::post( '/login', [MembersController::class, 'login'])->name('login');
 
-Route::post( '/create_plan', [TransactionsController::class, 'create_plan'])->name('create_plan')->middleware(CheckLoggedIn::class);
+Route::post( '/create_plan', [InvestmentController::class, 'create_plan'])->name('create_plan')->middleware(CheckLoggedIn::class);
 

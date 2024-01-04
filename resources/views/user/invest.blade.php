@@ -223,6 +223,7 @@
                 <div class="bg-white text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Select A Plan To Begin Pooling</h6>
+                        <h6 class="text-warning">Balance : $ {{ $total_balance }} </h6>
                        
                     </div>
                     <form method="POST" action="{{ route('create_plan') }}">
@@ -250,7 +251,7 @@
   <div class="row text-sm" >
     <div class="col-sm-12 col-md-6" style=" " > <div class="dropdown">
 
-    <select class="form-select" name="asset-selected" aria-label="Default select example">
+    <select class="form-select" name="plan-selected" aria-label="Default select example">
 
   <option value="STANDARD" selected>Standard Server: $300 - $4,000</option>
   <option value="PRO">Professional Server: $4,100 - $9,900</option>
@@ -265,6 +266,11 @@
 <div class="input-group mb-3 mt-4">
   <input type="number" class="form-control" placeholder="Amount" aria-label="Amount" name="amount" aria-describedby="basic-addon2">
   <span class="input-group-text" id="basic-addon2">USD</span>
+</div>
+
+<div class="user_id mt-1" style="display:none">
+        <input type="text" class="selectedAsset" value="{{ session('user_id') }}" placeholder="user id" name="user_id" />
+
 </div>
 
 <button type="submit" style="width:100%"  class="btn btn-info shadow-xl">Invest</button>
