@@ -220,6 +220,26 @@ Route::get('/update_roi', function () {
 });
 
 
+Route::get('/user/admin/deposit', function () {
+    $transactions = Transactions::where("type", "DEPOSIT")->get();
+    return view('admin.deposit', ['transactions' => $transactions]);
+})->name('admin_deposits')->middleware(CheckLoggedIn::class);
+
+
+
+Route::get('/user/admin/withdrawal', function () {
+    $transactions = Transactions::where("type", "WITHDRAWAL")->get();
+    return view('admin.withdrawals', ['transactions' => $transactions]);
+})->name('admin_withdrawals')->middleware(CheckLoggedIn::class);
+
+
+Route::get('/user/admin/users', function () {
+    $users = Members::all();
+    return view('admin.users', ['users' => $users]);
+})->name('admin_users')->middleware(CheckLoggedIn::class);
+
+
+
 Route::post( '/add_member', [MembersController::class, 'addMember'])->name('add_member');
 
 Route::post( '/submit_deposit', [TransactionsController::class, 'deposit'])->name('submit_deposit')->middleware(CheckLoggedIn::class);
