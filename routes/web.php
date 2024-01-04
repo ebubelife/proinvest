@@ -176,17 +176,17 @@ Route::get('/update_roi', function () {
         $percentage_roi = 0;
 
         if($plan=="STANDARD"){
-            $percentage_roi = (8/100) * $amount;
+            $percentage_roi = (8/100) * $investment->amount;
 
         }
 
         if($plan=="PRO"){
-            $percentage_roi = (10/100) * $amount;
+            $percentage_roi = (10/100) * $investment->amount;
 
         }
 
         if($plan=="ELITE"){
-            $percentage_roi = (15/100) * $amount;
+            $percentage_roi = (15/100) * $investment->amount;
 
         }
         
