@@ -232,8 +232,8 @@
     <div class="col-sm-12 col-md-6" style=" " > <div class="dropdown">
 
     <select class="form-select" aria-label="Default select example">
-  <option selected>Select A Plan</option>
-  <option value="1">Standard Server: $300 - $4,000</option>
+
+  <option value="1" selected>Standard Server: $300 - $4,000</option>
   <option value="2">Professional Server: $4,100 - $9,900</option>
   <option value="3">Elite Server: $10,000 - $30,000</option>
   <option value="3">DEX Server(Pancake Swap): 250BNB</option>

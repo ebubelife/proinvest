@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ session('user_name') }} - Deposit</title>
+    <title>{{ session('user_name') }} - Deposit Success</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="Invest, whale, USDT, mining, mining farm, proInvest, network marketing, internet marketing, crypto, bitcoin, ethereum, ethereum mining, liquidity, investment, portfolio, bitcoin investment, invest my bitcoin">
     <meta content="ProInvest is more than just a platform. We're a community of passionate crypto enthusiasts, united by the goal of building a *robust and thriving DeFi ecosystem.* Join us and be a part of the future of finance!
@@ -21,6 +21,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }} " rel="stylesheet">
     <link href="{{ asset( 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
@@ -33,6 +34,11 @@
 </head>
 
 <body>
+
+<!-- Modal -->
+
+
+
     <div class="container-fluid position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -72,8 +78,8 @@
                     <a href="{{ route('invest') }}" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Invest</a>
                     <a href="{{ route('referrals') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Referrals</a>
 
-                    <a href="{{ route('deposit') }}" class="nav-item nav-link"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
-                    <a href="{{ route('withdrawals') }}" class="nav-item nav-link active"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
+                    <a href="{{ route('deposit') }}" class="nav-item nav-link active"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
+                    <a href="{{ route('withdrawals') }}" class="nav-item nav-link"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
                     <a href="{{ route('profile') }}" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Profile</a>
 <a href="settings.html" class="nav-item nav-link"><i class="fa fa-cog me-2"></i>Settings</a>
 
@@ -150,7 +156,30 @@
 
 
 -->
-                 
+                 <!--
+
+   <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notifications</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end  border-0 rounded-md shadow-xl rounded-bottom m-0 notification-dropdown">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">New Referral</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Wallet funded</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                          
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+
+-->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="{{asset('img/user-avatar-svgrepo-com.svg') }}" alt="" style="width: 40px; height: 40px;">
@@ -197,24 +226,11 @@
 
             <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="bg-white text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Withdraw From Wallet Balance</h6>
-
-                        <h6 class="text-warning">Balance : $ {{ $total_balance }} </h6>
-                       
-                    </div>
+                <div class="bg-white  rounded p-4">
                    
 
-<div class="container">
-  <div class="row text-sm" >
-   
-  <form method="POST" action="{{ route('submit_withdrawal') }}">
-                    @csrf <!-- Laravel CSRF protection token -->
 
-
-                                                <!-- Display Form Errors -->
-@if ($errors->any())
+                @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -228,31 +244,21 @@
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
-@endif 
-
-<div class="input-group mb-3 mt-4">
-  <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" name="amount" aria-describedby="basic-addon2">
-  <span class="input-group-text" id="basic-addon2">USD</span>
-</div>
+@endif
 
 
-<div class="user_id mt-1" style="display:none">
-        <input type="text" class="selectedAsset" value="{{ session('user_id') }}" placeholder="user id" name="user_id" />
-
-</div>
-
-<button type="submit" style="width:100%"  class="btn btn-info shadow-xl">Withdraw</button>
 
 
-</form>
-<a href=""  style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Withdrawal History</a>
+<p style="text-align:center; font-size:20px"> Your transaction is currently processing. Please wait while we credit your wallet </p>
+
+
+<p style="text-align:center; font-size:20px"> <a href="{{ route('admin') }}" class="btn btn-primary">Back To Dashboard </a></p>
+
+<p style="text-align:center; font-size:20px"> <a href="{{ route('deposit') }}" class="btn btn-warning">Back To Deposit </a></p>
 
 
 </div>
-    <div class="col-sm-12 col-md-6"> <div class="dropdown">
- 
-</div>
-   
+
   </div>
 
 
@@ -301,6 +307,8 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset( 'js/main_.js') }}"></script>
+
+   
 </body>
 
 </html>

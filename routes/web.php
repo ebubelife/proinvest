@@ -6,6 +6,7 @@ use App\Http\Controllers\TransactionsController;
 use Illuminate\Support\Facades\Session;
 use App\Models\Members;
 use App\Models\Transactions;
+use App\Http\Middleware\CheckLoggedIn;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +69,7 @@ Route::get('/register', function () {
 
 Route::get('/admin', function () {
     return view('admin');
-})->name('admin');
+})->name('admin')->middleware(CheckLoggedIn::class);
 
 
 Route::get('/plans', function () {
@@ -80,7 +81,7 @@ Route::get('/plans', function () {
 
 Route::get('/user/invest', function () {
     return view('/user/invest');
-})->name('invest');
+})->name('invest')->middleware(CheckLoggedIn::class);
 
 
 
@@ -96,31 +97,48 @@ Route::get('/user/referrals', function () {
 
     
     return view('/user/referrals', ['referrals' => $referrals]);
-})->name('referrals');
+})->name('referrals')->middleware(CheckLoggedIn::class);
 
 
 Route::get('/user/deposit', function () {
     return view('/user/deposit');
-})->name('deposit');
+})->name('deposit')->middleware(CheckLoggedIn::class);
 
 
 Route::get('/user/withdrawals', function () {
-    return view('/user/withdrawals');
-})->name('withdrawals');
+
+    $user_id = Session::get("user_id");
+    $curr_user = Members::find($user_id);
+
+    $total_balance = intval($curr_user->deposit_balance) + intval($curr_user->balance) + intval($curr_user->ref_balance);
+
+    
+    return view('/user/withdrawals', ['total_balance'=>$total_balance]);
+})->name('withdrawals')->middleware(CheckLoggedIn::class);
 
 
 Route::get('/user/profile', function () {
     return view('/user/profile');
-})->name('profile');
+})->name('profile')->middleware(CheckLoggedIn::class);
 
 Route::get('/user/deposit/success', function () {
     return view('/user/deposit_message');
-})->name('deposit_success');
+})->name('deposit_success')->middleware(CheckLoggedIn::class);
 
 Route::get('/user/deposit/history', function () {
     $transactions = Transactions::where("user_id", "18")->where("type", "DEPOSIT")->get();
     return view('user.deposit_history', ['transactions' => $transactions]);
-})->name('deposit_history');
+})->name('deposit_history')->middleware(CheckLoggedIn::class);
+
+
+Route::get('/user/withdrawal/success', function () {
+    return view('/user/withdrawal_success');
+})->name('withdrawal_success')->middleware(CheckLoggedIn::class);
+
+Route::get('/user/withdrawal/history', function () {
+    $transactions = Transactions::where("user_id", "18")->where("type", "WITHDRAWAL")->get();
+    return view('user.withdrawal_history', ['transactions' => $transactions]);
+})->name('withdrawal_history')->middleware(CheckLoggedIn::class);
 
 
 
@@ -136,7 +154,10 @@ Route::get('/ref/{ref_code}', function ($ref_code) {
 
 Route::post( '/add_member', [MembersController::class, 'addMember'])->name('add_member');
 
-Route::post( '/submit_deposit', [TransactionsController::class, 'deposit'])->name('submit_deposit');
+Route::post( '/submit_deposit', [TransactionsController::class, 'deposit'])->name('submit_deposit')->middleware(CheckLoggedIn::class);
+
+
+Route::post( '/submit_withdrawal', [TransactionsController::class, 'withdrawal'])->name('submit_withdrawal')->middleware(CheckLoggedIn::class);
 
 
 Route::post( '/login', [MembersController::class, 'login'])->name('login');
