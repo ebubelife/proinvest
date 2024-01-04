@@ -165,15 +165,45 @@ Route::get('/ref/{ref_code}', function ($ref_code) {
 
 Route::get('/update_roi', function () {
    
-    $user = Members::where('email',"ebubeemeka19@gmail.com" ) ->first();
+    // Fetch data from the investment table where status is ACTIVE
+    $activeInvestments = Investment::where('status', 'ACTIVE')->get();
 
-    $curr_balance = $user->balance ;
+    foreach ($activeInvestments as $investment) {
+        $userId = $investment->user_id;
 
-    $user->balance = intval($curr_balance) + 100;
+        $plan = $investment->plan;
+        $percentage_roi = 0;
 
-    $user->save();
-   
-    return "Saved"; 
+        if($plan=="STANDARD"){
+            $percentage_roi = (8/100) * $amount;
+
+        }
+
+        if($plan=="PRO"){
+            $percentage_roi = (10/100) * $amount;
+
+        }
+
+        if($plan=="ELITE"){
+            $percentage_roi = (15/100) * $amount;
+
+        }
+        
+
+        // Update the Members table for the retrieved user_id
+        $member = Members::find($userId);
+        if ($member) {
+            // Perform calculations or update logic as needed
+            // For example, updating the roi_balance column
+            $newRoiBalance = $member->balance + $percentage_roi; // Replace this with your logic
+
+            // Update the roi_balance column for the user
+            $member->balance = $newRoiBalance;
+            $member->save();
+        }
+    }
+
+    return "ROI balances updated successfully";
 });
 
 
