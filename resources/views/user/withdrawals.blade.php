@@ -231,7 +231,7 @@
 @endif 
 
 <div class="input-group mb-3 mt-4">
-  <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" name="amount" aria-describedby="basic-addon2">
+  <input type="number" class="form-control" placeholder="Amount" aria-label="Amount" name="amount" aria-describedby="basic-addon2">
   <span class="input-group-text" id="basic-addon2">USD</span>
 </div>
 

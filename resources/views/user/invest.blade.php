@@ -225,31 +225,51 @@
                         <h6 class="mb-0">Select A Plan To Begin Pooling</h6>
                        
                     </div>
-                   
+                    <form method="POST" action="{{ route('create_plan') }}">
+                    @csrf <!-- Laravel CSRF protection token -->
+
+
+                                                <!-- Display Form Errors -->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif 
 
 <div class="container">
   <div class="row text-sm" >
     <div class="col-sm-12 col-md-6" style=" " > <div class="dropdown">
 
-    <select class="form-select" aria-label="Default select example">
+    <select class="form-select" name="asset-selected" aria-label="Default select example">
 
-  <option value="1" selected>Standard Server: $300 - $4,000</option>
-  <option value="2">Professional Server: $4,100 - $9,900</option>
-  <option value="3">Elite Server: $10,000 - $30,000</option>
-  <option value="3">DEX Server(Pancake Swap): 250BNB</option>
-  <option value="3">PRO DEX Server (UNISWAP): 25ETH</option>
+  <option value="STANDARD" selected>Standard Server: $300 - $4,000</option>
+  <option value="PRO">Professional Server: $4,100 - $9,900</option>
+  <option value="ELITE">Elite Server: $10,000 - $30,000</option>
+  <option value="DEX">DEX Server(Pancake Swap): 250BNB</option>
+  <option value="PRO_DEX">PRO DEX Server (UNISWAP): 25ETH</option>
 </select>
  
 </div>
 
 
 <div class="input-group mb-3 mt-4">
-  <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon2">
+  <input type="number" class="form-control" placeholder="Amount" aria-label="Amount" name="amount" aria-describedby="basic-addon2">
   <span class="input-group-text" id="basic-addon2">USD</span>
 </div>
 
-<button type="button" style="width:100%"  class="btn btn-info shadow-xl">Invest</button>
+<button type="submit" style="width:100%"  class="btn btn-info shadow-xl">Invest</button>
 
+</form>
 <button type="button" style="width:100%"  class="btn btn-primary shadow-xl mt-2">View Investments</button>
 
 

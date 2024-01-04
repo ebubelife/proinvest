@@ -161,3 +161,6 @@ Route::post( '/submit_withdrawal', [TransactionsController::class, 'withdrawal']
 
 
 Route::post( '/login', [MembersController::class, 'login'])->name('login');
+
+Route::post( '/create_plan', [TransactionsController::class, 'create_plan'])->name('create_plan')->middleware(CheckLoggedIn::class);
+
