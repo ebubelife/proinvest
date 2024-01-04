@@ -6,6 +6,7 @@ use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\InvestmentController;
 use Illuminate\Support\Facades\Session;
 use App\Models\Members;
+use App\Models\Investment;
 use App\Models\Transactions;
 
 
