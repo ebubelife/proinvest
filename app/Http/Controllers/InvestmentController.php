@@ -118,7 +118,9 @@ class InvestmentController extends Controller
             return redirect()->route('transaction_error');
             }
 
-            session()->flash('success', 'Your plan has been successfully created');
+          
+
+            session()->flash('success', 'Your plan has been successfully created. Your plan is now very ACTIVE');
     
             return redirect()->route('admin');
 
