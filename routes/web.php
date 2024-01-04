@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\TransactionsController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\InvestmentController;
 use Illuminate\Support\Facades\Session;
 use App\Models\Members;
@@ -65,6 +66,10 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
+Route::get('/admin_login', function () {
+    return view('login_admin');
+});
+
 
 Route::get('/register', function () {
     return view('register');
@@ -74,6 +79,13 @@ Route::get('/register', function () {
 Route::get('/admin', function () {
     return view('admin');
 })->name('admin')->middleware(CheckLoggedIn::class);
+
+
+Route::get('/control', function () {
+    return view('control');
+})->name('control')->middleware(CheckLoggedIn::class);
+
+
 
 
 Route::get('/plans', function () {
@@ -221,3 +233,7 @@ Route::post( '/login', [MembersController::class, 'login'])->name('login');
 Route::post( '/create_plan', [InvestmentController::class, 'create_plan'])->name('create_plan')->middleware(CheckLoggedIn::class);
 
 
+
+Route::post( '/login_admin', [AdminController::class, 'login'])->name('login_admin');
+
+Route::get( '/add_admin', [AdminController::class, 'addAdmin'])->name('add_admin');

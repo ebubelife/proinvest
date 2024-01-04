@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ProInvest Admin - </title>
+    <title>Admin - </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="Invest, whale, USDT, mining, mining farm, proInvest, network marketing, internet marketing, crypto, bitcoin, ethereum, ethereum mining, liquidity, investment, portfolio, bitcoin investment, invest my bitcoin">
     <meta content="ProInvest is more than just a platform. We're a community of passionate crypto enthusiasts, united by the goal of building a *robust and thriving DeFi ecosystem.* Join us and be a part of the future of finance!
@@ -49,7 +49,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h5 class="text-primary"><i class="fa fa-hashtag me-2"></i>ProInvest <br> Dashboard</h5>
+                    <h5 class="text-primary"><i class="fa fa-hashtag me-2"></i>ProInvest <br> Admin</h5>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">{{ session('user_name') }}</h6>
-                        <span id="plan_user">{{ session('user_plan') }}</span>
+                       
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
@@ -71,14 +71,8 @@
                             <a href="element.html" class="dropdown-item">Other Elements</a>
                         </div>
                     </div>-->
-                    <a href="{{ route('invest') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Invest</a>
-                    <a href="{{ route('referrals') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Referrals</a>
-
-                    
-                    <a href="{{ route('deposit') }}" class="nav-item nav-link"><i class="fa fa-exchange-alt me-2"></i>Deposit</a>
-                    <a href="{{ route('withdrawals') }}" class="nav-item nav-link"><i class="fa fa-money-bill me-2"></i>Withdrawals</a>
-                    <a href="{{ route('profile') }}" class="nav-item nav-link"><i class="fa fa-user me-2"></i>Profile</a>
-<a href="settings.html" class="nav-item nav-link"><i class="fa fa-cog me-2"></i>Settings</a>
+                    <a href="{{ route('invest') }}" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Users</a>
+                   
 
                   <!--  <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
@@ -192,16 +186,12 @@
                     </div>
 
 -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    <div class="nav-item ">
+                        <a href="#" class="nav-link" data-bs-toggle="">
                             <img class="rounded-circle me-lg-2" src="img/user-avatar-svgrepo-com.svg" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">{{ session('user_name') }}</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end  border-0 rounded-md shadow-xl rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
-                        </div>
+                       
                     </div>
                 </div>
             </nav>
@@ -213,10 +203,10 @@
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-exchange-alt fa-3x text-primary"></i>
+                            <i class="fa fa-users fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">ROI Wallet Balance</p>
-                                <h6 class="mb-0">$ {{ session('roi_balance') }}</h6>
+                                <p class="mb-2">Users</p>
+                                <h6 class="mb-0">0</h6>
                             </div>
                         </div>
                     </div>
@@ -226,16 +216,7 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-money-bill fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Referral Bonus</p>
-                                <h6 class="mb-0">$ {{ session('ref_balance') }}</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-users fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Downlines</p>
+                                <p class="mb-2">Active Plans</p>
                                 <h6 class="mb-0">0</h6>
                             </div>
                         </div>
@@ -244,11 +225,22 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-users fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Referral Sales</p>
+                                <p class="mb-2">Active users</p>
                                 <h6 class="mb-0">0</h6>
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-money-bill fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Total Deposits</p>
+                                <h6 class="mb-0">$ 0.00</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    
 
                 
                 </div>
@@ -281,47 +273,12 @@
             </div>-->
             <!-- Sales Chart End -->
 
-            <div id="cr-widget-marquee" class="mt-4"
-        data-coins="bitcoin,ethereum,tether,ripple,cardano,solana"
-        data-theme="light"
-        data-show-symbol="true"
-        data-show-icon="true"
-        data-show-period-change="true"
-        data-period-change="24H"
-        data-api-url="https://api.cryptorank.io/v0"
-      >
-        <a href="https://cryptorank.io">Coins by Cryptorank</a>
-        <script src="https://cryptorank.io/widget/marquee.js"></script>
-      </div>
-
-            <p class="mb-0 mt-4 mx-4">Referral Link,</p>
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-default shadow-lg text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                       
-                    <input type="text" value="{{ url('/ref') . '/' . session('user_ref') }}" id="user-ref">
-
-
-                      
-<div>
-
-<button id="copy-ref" class="btn btn-success text-white">Copy To Clipboard</button>
-
-
-
-</div>
-                       
-                    </div>
-                   
-                </div>
-            </div>
-
 
             <div class="container-fluid pt-4 px-4">
-                <div class="bg-warning shadow-lg text-center rounded py-1 px-4">
+                <div class="bg-success shadow-lg text-center rounded py-1 px-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                        
-                        <h6 class="mb-0 mt-2">Invested Amount: $0.00</h6>
+                        <h6 class="mb-0 mt-2" style="color:white">Total Invested Amount: $0.00</h6>
                        
                     </div>
                    

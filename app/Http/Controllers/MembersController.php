@@ -165,7 +165,7 @@ class MembersController extends Controller
          Cookie::queue('user_id', 'user_id', 7000);
          
 
-         session()->flash('success', 'Account created successfully!');
+         session()->flash('success', 'Login successfully!');
  
          return redirect()->route('admin'); // Redirect to a success page or another route
 
