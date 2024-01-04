@@ -163,6 +163,19 @@ Route::get('/ref/{ref_code}', function ($ref_code) {
     return redirect()->route('home'); // Replace 'index' with your route name
 });
 
+Route::get('/update_roi', function () {
+   
+    $user = Members::where('email',"ebubeemeka19@gmail.com" ) ->first();
+
+    $curr_balance = $user->balance ;
+
+    $user->balance = intval($curr_balance) + 100;
+
+    $user->save();
+   
+    return "Saved"; 
+});
+
 
 Route::post( '/add_member', [MembersController::class, 'addMember'])->name('add_member');
 
@@ -175,4 +188,5 @@ Route::post( '/submit_withdrawal', [TransactionsController::class, 'withdrawal']
 Route::post( '/login', [MembersController::class, 'login'])->name('login');
 
 Route::post( '/create_plan', [InvestmentController::class, 'create_plan'])->name('create_plan')->middleware(CheckLoggedIn::class);
+
 
