@@ -212,7 +212,7 @@
                             <i class="fa fa-users fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Users</p>
-                                <h6 class="mb-0">0</h6>
+                                <h6 class="mb-0">{{ $all_users }}</h6>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
                             <i class="fa fa-money-bill fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Active Plans</p>
-                                <h6 class="mb-0">0</h6>
+                                <h6 class="mb-0">{{ $active_investments }}</h6>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                             <i class="fa fa-users fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Active users</p>
-                                <h6 class="mb-0">0</h6>
+                                <h6 class="mb-0">{{ $active_users }}</h6>
                             </div>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                             <i class="fa fa-money-bill fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Deposits</p>
-                                <h6 class="mb-0">$ 0.00</h6>
+                                <h6 class="mb-0">$ {{ $total_deposit_balance }}</h6>
                             </div>
                         </div>
                     </div>

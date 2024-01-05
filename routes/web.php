@@ -82,7 +82,30 @@ Route::get('/admin', function () {
 
 
 Route::get('/control', function () {
-    return view('control');
+
+
+
+    $members = Members::all();
+    $activeInvestments = Investment::where("status","ACTIVE")->get();
+
+    //array of users with active plans
+    $all_active_members = array();
+
+    foreach ($activeInvestments as $investment) {
+        $userId = $investment->user_id;
+
+        if (!in_array($userId, $all_active_members)) {
+        array_push($all_active_members,$userId);
+        }
+  
+
+    }
+
+    $totalDepositedBalance = $members->sum('deposit_balance');
+
+
+
+    return view('control',['all_users'=>count($members), 'active_investments'=>count($activeInvestments), 'active_users'=>count($all_active_members), 'total_deposit_balance'=>$totalDepositedBalance]);
 })->name('control')->middleware(CheckLoggedIn::class);
 
 
