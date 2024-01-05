@@ -87,6 +87,7 @@ Route::get('/control', function () {
 
     $members = Members::all();
     $activeInvestments = Investment::where("status","ACTIVE")->get();
+    $activeInvestmentsAmount = $activeInvestments->sum('amount');
 
     //array of users with active plans
     $all_active_members = array();
@@ -105,7 +106,7 @@ Route::get('/control', function () {
 
 
 
-    return view('control',['all_users'=>count($members), 'active_investments'=>count($activeInvestments), 'active_users'=>count($all_active_members), 'total_deposit_balance'=>$totalDepositedBalance]);
+    return view('control',['all_users'=>count($members), 'active_investments'=>count($activeInvestments), 'active_users'=>count($all_active_members), 'total_deposit_balance'=>$totalDepositedBalance,'total_active_amount'=>$activeInvestmentsAmount]);
 })->name('control')->middleware(CheckLoggedIn::class);
 
 

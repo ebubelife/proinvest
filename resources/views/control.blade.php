@@ -284,7 +284,7 @@
                 <div class="bg-success shadow-lg text-center rounded py-1 px-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                        
-                        <h6 class="mb-0 mt-2" style="color:white">Total Invested Amount: $0.00</h6>
+                        <h6 class="mb-0 mt-2" style="color:white">Total Invested Amount (Active): ${{ $total_active_amount }}</h6>
                        
                     </div>
                    
