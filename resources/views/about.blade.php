@@ -69,9 +69,11 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">About Us</p>
-                    <h1 class="display-5 mb-4">We Help Our Clients To Grow Their Business</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="border rounded p-4">
+                    <h1 class="display-5 mb-4">We Help Whales Unlock Massive Returns With Intelligent Systems</h1>
+                    <p class="mb-4">At ProInvest, we're not just another platform; we're a tight-knit community of devoted crypto enthusiasts driven by a shared vision. Our mission? To forge a robust and dynamic DeFi ecosystem that transcends boundaries.
+
+We envision more than a mere marketplace – it's a vibrant hub where buyers and sellers converge, engaging in seamless transactions. The lifeblood? Liquidity. It's what keeps this marketplace thriving, ensuring transactions flow effortlessly</p>
+<div class="border rounded p-4">
                         <nav>
                             <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
                                 <button class="nav-link fw-semi-bold active" id="nav-story-tab" data-bs-toggle="tab" data-bs-target="#nav-story" type="button" role="tab" aria-controls="nav-story" aria-selected="true">Story</button>
@@ -81,16 +83,14 @@
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-story" role="tabpanel" aria-labelledby="nav-story-tab">
-                                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
-                                <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit</p>
-                            </div>
+                                <p>ProInvest is more than just a platform. We're a community of passionate crypto enthusiasts, united by the goal of building a *robust and thriving DeFi ecosystem.* Join us and be a part of the future of finance!</p>
+</p>
+                                                         </div>
                             <div class="tab-pane fade" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
-                                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
-                                <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit</p>
+                                <p>Empowering individuals to activate their idle USDT by offering passive income opportunities through USDT liquidity mining. We aim to fuel financial transactions, enabling seamless trading by providing the liquidity necessary to create a bustling marketplace.</p>
                             </div>
                             <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
-                                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.</p>
-                                <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit</p>
+                                <p>Revolutionizing the financial landscape by democratizing USDT utilization, fostering a vibrant ecosystem where USDT holders actively engage in generating passive income through liquidity mining. Our vision is to establish a dynamic marketplace where liquidity drives seamless and accessible trading opportunities for everyone.</p>
                             </div>
                         </div>
                     </div>
@@ -105,8 +105,8 @@
                                     <i class="fa fa-times text-white"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h4>No Hidden Cost</h4>
-                                    <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                    <h4>No Hidden Fees</h4>
+                                    
                                 </div>
                                 <div class="border-end d-none d-lg-block"></div>
                             </div>
@@ -120,8 +120,8 @@
                                     <i class="fa fa-users text-white"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h4>Dedicated Team</h4>
-                                    <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                    <h4>Dedicated Support</h4>
+                                   
                                 </div>
                                 <div class="border-end d-none d-lg-block"></div>
                             </div>
@@ -135,8 +135,8 @@
                                     <i class="fa fa-phone text-white"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h4>24/7 Available</h4>
-                                    <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                    <h4>Guaranteed & trusted</h4>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -148,34 +148,29 @@
     <!-- About End -->
 
 
-    <!-- Facts Start -->
-    <div class="container-fluid facts my-5 py-5">
+   <!-- Facts Start -->
+   <div class="container-fluid facts my-5 py-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-users fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Happy Clients</span>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">8000</h1>
+                    <span class="fs-5 text-white">ACTIVE USERS</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.3s">
                     <i class="fa fa-check fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Projects Completed</span>
+                    <h1 class="display-4 text-white" data-toggle="counter-up">600000</h1>
+                    <span class="fs-5 text-white">COMPLETED TRADES</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                <div class="col-sm-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Dedicated Staff</span>
+                    <h1 class="display-4 text-white" data-toggle="">11000</h1>
+                    <span class="fs-5 text-white">TOTAL USERS</span>
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <i class="fa fa-award fa-3x text-white mb-3"></i>
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 text-white">Awards Achieved</span>
-                    <hr class="bg-white w-25 mx-auto mb-0">
-                </div>
+            
             </div>
         </div>
     </div>
@@ -253,11 +248,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Financial Planning</a>
-                    <a class="btn btn-link" href="">Cash Investment</a>
-                    <a class="btn btn-link" href="">Financial Consultancy</a>
-                    <a class="btn btn-link" href="">Business Loans</a>
-                    <a class="btn btn-link" href="">Business Analysis</a>
+                    <a class="btn btn-link" href="">Liquidity Provision Services</a>
+                    <a class="btn btn-link" href="">Staking and Yield Farming Platforms</a>
+                    <a class="btn btn-link" href="">Education and Community Building</a>
+                    <a class="btn btn-link" href="">Token Launchpad and Investment Opportunities</a>
+                    <a class="btn btn-link" href="">Portfolio Management and Analytics</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Quick Links</h4>
@@ -267,14 +262,7 @@
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -286,11 +274,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">ProInvest Corp</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                     <a class="border-bottom" href="#">ProInvest Team</a>
                 </div>
             </div>
         </div>

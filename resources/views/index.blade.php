@@ -54,7 +54,7 @@
                                 <div class="col-lg-8">
                                     <p class="d-inline-block border border-white rounded text-primary fw-semi-bold py-1 px-3 animated slideInDown">Welcome to ProInvest</p>
                                     <h1 class="display-1 mb-4 animated slideInDown">We Make Money Work For You</h1>
-                                    <a href="" class="btn btn-primary py-3 px-5 animated slideInDown">View Our Offers</a>
+                                    <a href="{{ route('plans') }}" class="btn btn-primary py-3 px-5 animated slideInDown">View Our Plans</a>
                                 </div>
                             </div>
                         </div>
