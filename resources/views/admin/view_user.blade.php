@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin Deposits</title>
+    <title>Admin View User</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="Invest, whale, USDT, mining, mining farm, proInvest, network marketing, internet marketing, crypto, bitcoin, ethereum, ethereum mining, liquidity, investment, portfolio, bitcoin investment, invest my bitcoin">
     <meta content="ProInvest is more than just a platform. We're a community of passionate crypto enthusiasts, united by the goal of building a *robust and thriving DeFi ecosystem.* Join us and be a part of the future of finance!
@@ -256,73 +256,39 @@
 
  <div class="container-fluid pt-4 px-4">
 
- <div class="search-container">
-      <input type="text" class="form-control search-input" placeholder="Search...">
-      <button class="btn btn-primary search-btn">Search</button>
-    </div>
-                <div class="bg-light text-center rounded p-4 mt-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Users</h6>
-                       
-                    </div>
+ 
+ <div class="container mt-5">
+    <form>
+      <div class="mb-3">
+        <label for="inputField1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputField1" name="field1" value="{{ $view_user->name }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="inputField2" name="field2" value="{{ $view_user->email }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField3" class="form-label">Phone</label>
+        <input type="text" class="form-control" d="inputField3" name="field3" value="{{ $view_user->phone }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField4" class="form-label">Referral Balance</label>
+        <input type="text" class="form-control" id="inputField4" name="field4" value="{{ $view_user->ref_balance }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField5" class="form-label">Deposit Balance</label>
+        <input type="text" class="form-control" id="inputField5" name="field5" value="{{ $view_user->deposit_balance }}">
+      </div>
 
-
-                    @if (count($users) == 0)
-
-<p style="text-align:center">No users yet</p>
-<p style="text-align:center; font-size:20px"> <a href="{{ route('deposit') }}" class="btn btn-primary">Deposit </a></p>
-
-
-@endif
-
-
-                    @if (count($users) > 0)
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-dark">
-                                      <th scope="col">Date Reg</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">ROI bal</th>
-                                    
-                                    <th scope="col">Ref bal</th>
-
-                                    <th scope="col">Deposit bal</th>
-                                    <th scope="col">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            @foreach ($users as $user)
-                            <tr>
-                                      <td>{{ \Carbon\Carbon::parse($user->created_at)->isoFormat('DD MMMM YYYY H:m') }}</td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->balance }}</td>
-                                    <td>{{ $user->ref_balance }}</td>
-                                    <td>{{ $user->deposit_balance }}</td>
-                                    <td><a href="{{ route('admin_view_user', ['id' => $user->id]) }}" class="btn-warning btn">View</a></td>
-                                   
-                                </tr>
-                                
-                            @endforeach
-                               
-                              
-                             
-                            </tbody>
-                        </table>
-                    </div>
-
-                    @endif
-                </div>
-            </div>
-            <!-- Recent Sales End -->
-
-
-</div>
-
+      <div class="mb-3">
+        <label for="inputField5" class="form-label">ROI Balance</label>
+        <input type="text" class="form-control" id="inputField5" name="field5" value="{{ $view_user->balance }}">
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
   </div>
+
+ 
 
 
                     </div>

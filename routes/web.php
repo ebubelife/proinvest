@@ -189,6 +189,14 @@ Route::get('/user/withdrawal/history', function () {
     return view('user.withdrawal_history', ['transactions' => $transactions]);
 })->name('withdrawal_history')->middleware(CheckLoggedIn::class);
 
+Route::get('/admin/user/view/{id}', function ($id) {
+
+    $user = Members::find($id);
+
+    return view('admin.view_user',["view_user"=>$user]);
+   
+})->name('admin_view_user')->middleware(CheckLoggedIn::class);
+
 
 
 Route::get('/ref/{ref_code}', function ($ref_code) {
