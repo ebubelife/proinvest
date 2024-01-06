@@ -264,6 +264,56 @@ Route::get('/user/admin/withdrawal', function () {
     return view('admin.withdrawals', ['transactions' => $transactions]);
 })->name('admin_withdrawals')->middleware(CheckLoggedIn::class);
 
+Route::get('/user/admin/approve_deposit/{tx_id}', function ($tx_id) {
+
+    $deposit_tx = Transactions::find($tx_id);
+
+    $deposit_amount = $deposit_tx->amount;
+    
+
+    $deposit_tx->status = "APPROVED";
+
+    $deposit_tx->save();
+
+    $user_to_update = Members::find($deposit_tx->user_id);
+    $user_deposit_balance = $user_to_update->deposit_balance;
+
+    $user_to_update->deposit_balance = intval($deposit_amount) + intval($user_deposit_balance);
+
+    $user_to_update->save();
+
+
+    $transactions = Transactions::where("type", "DEPOSIT")->get();
+    return view('admin.deposit', ['transactions' => $transactions]);
+})->name('approve_deposit')->middleware(CheckLoggedIn::class);
+
+
+Route::get('/user/admin/approve_withdrawals/{tx_id}', function ($tx_id) {
+
+    $withdrawals_tx = Transactions::find($tx_id);
+
+    $withdrawals_amount = $withdrawals_tx->amount;
+    
+
+    $withdrawals_tx->status = "APPROVED";
+
+    $withdrawals_tx->save();
+
+    $user_to_update = Members::find($withdrawals_tx->user_id);
+    $user_deposit_balance = $user_to_update->deposit_balance;
+
+    $user_to_update->deposit_balance = intval($user_deposit_balance) - intval($withdrawals_amount) ;
+
+    $user_to_update->save();
+
+
+    $transactions = Transactions::where("type", "WITHDRAWALS")->get();
+    return view('admin.withdrawals', ['transactions' => $transactions]);
+})->name('approve_withdrawal')->middleware(CheckLoggedIn::class);
+
+
+
+
 
 Route::get('/user/admin/users', function () {
     $users = Members::all();
@@ -274,15 +324,23 @@ Route::get('/user/admin/users', function () {
 
 Route::post( '/add_member', [MembersController::class, 'addMember'])->name('add_member');
 
+Route::post( '/update_member', [MembersController::class, 'updateMember'])->name('update_member');
+
+Route::post( '/search_member', [MembersController::class, 'searchMember'])->name('search_member');
+
+
+
 Route::post( '/submit_deposit', [TransactionsController::class, 'deposit'])->name('submit_deposit')->middleware(CheckLoggedIn::class);
 
 
 Route::post( '/submit_withdrawal', [TransactionsController::class, 'withdrawal'])->name('submit_withdrawal')->middleware(CheckLoggedIn::class);
 
 
+
 Route::post( '/login', [MembersController::class, 'login'])->name('login');
 
 Route::post( '/create_plan', [InvestmentController::class, 'create_plan'])->name('create_plan')->middleware(CheckLoggedIn::class);
+
 
 
 

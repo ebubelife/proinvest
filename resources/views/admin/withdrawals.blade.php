@@ -274,7 +274,18 @@
                                   
                                     <td>{{ $transaction->status }}</td>
                                     <td>{{ $transaction->type }}</td>
-                                    <td><button class="btn-success btn">Approve</button></td>
+                                    @if ($transaction->status == "PENDING")
+
+                                    <td><a href="{{ route('approve_withdrawal',['tx_id' => $transaction->id] ) }}" class="btn-warning btn">PENDING</a></td>
+
+                                   @endif
+
+                                   @if ($transaction->status == "APPROVED")
+
+                                    <td><button  class="btn-success btn">APPROVED</button></td>
+
+                                    @endif
+                                   
                                    
                                 </tr>
                                 

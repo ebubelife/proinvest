@@ -256,9 +256,38 @@
 
  <div class="container-fluid pt-4 px-4">
 
- <div class="search-container">
-      <input type="text" class="form-control search-input" placeholder="Search...">
-      <button class="btn btn-primary search-btn">Search</button>
+
+
+ <form method="POST" action="{{ route('search_member') }}">
+
+ @csrf <!-- Laravel CSRF protection token -->
+
+<!-- Display Form Errors -->
+@if ($errors->any())
+<div class="alert alert-danger">
+<ul>
+@foreach ($errors->all() as $error)
+<li>{{ $error }}</li>
+@endforeach
+</ul>
+</div>
+@endif
+
+@if (session('success'))
+<div class="alert alert-success">
+{{ session('success') }}
+</div>
+@endif
+     <div class="search-container">
+                   
+
+      <input type="text" name ="term" class="form-control search-input" placeholder="Search by email">
+      <button type="submit" class="btn btn-primary search-btn">Search</button>
+
+</form>
+
+
+
     </div>
                 <div class="bg-light text-center rounded p-4 mt-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">

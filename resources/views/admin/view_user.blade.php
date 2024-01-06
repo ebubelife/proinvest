@@ -258,31 +258,56 @@
 
  
  <div class="container mt-5">
-    <form>
-      <div class="mb-3">
-        <label for="inputField1" class="form-label">Name</label>
-        <input type="text" class="form-control" id="inputField1" name="field1" value="{{ $view_user->name }}">
-      </div>
-      <div class="mb-3">
-        <label for="inputField2" class="form-label">Email</label>
-        <input type="text" class="form-control" id="inputField2" name="field2" value="{{ $view_user->email }}">
-      </div>
-      <div class="mb-3">
-        <label for="inputField3" class="form-label">Phone</label>
-        <input type="text" class="form-control" d="inputField3" name="field3" value="{{ $view_user->phone }}">
-      </div>
-      <div class="mb-3">
-        <label for="inputField4" class="form-label">Referral Balance</label>
-        <input type="text" class="form-control" id="inputField4" name="field4" value="{{ $view_user->ref_balance }}">
-      </div>
-      <div class="mb-3">
-        <label for="inputField5" class="form-label">Deposit Balance</label>
-        <input type="text" class="form-control" id="inputField5" name="field5" value="{{ $view_user->deposit_balance }}">
+ <form method="POST" action="{{ route('update_member') }}">
+                    @csrf <!-- Laravel CSRF protection token -->
+
+                      <!-- Display Form Errors -->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+
+<div class="mb-3" >
+        <label for="inputField1" class="form-label">USER ID</label>
+        <input type="text" class="form-control" id="id" name="id" value="{{ $view_user->id }}">
       </div>
 
       <div class="mb-3">
-        <label for="inputField5" class="form-label">ROI Balance</label>
-        <input type="text" class="form-control" id="inputField5" name="field5" value="{{ $view_user->balance }}">
+        <label for="inputField1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputField1" name="name" value="{{ $view_user->name }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="inputField2" name="email" value="{{ $view_user->email }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField3" class="form-label">Phone</label>
+        <input type="text" class="form-control" d="inputField3" name="phone" value="{{ $view_user->phone }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField4" class="form-label">Referral Balance ($)</label>
+        <input type="text" class="form-control" id="inputField4" name="ref" value="{{ $view_user->ref_balance }}">
+      </div>
+      <div class="mb-3">
+        <label for="inputField5" class="form-label">Deposit Balance ($)</label>
+        <input type="text" class="form-control" id="inputField5" name="deposit" value="{{ $view_user->deposit_balance }}">
+      </div>
+
+      <div class="mb-3">
+        <label for="inputField5" class="form-label">ROI Balance ($)</label>
+        <input type="text" class="form-control" id="inputField5" name="roi" value="{{ $view_user->balance }}">
       </div>
       <button type="submit" class="btn btn-primary">Update</button>
     </form>

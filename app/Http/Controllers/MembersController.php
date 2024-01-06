@@ -125,6 +125,143 @@ class MembersController extends Controller
        
     }
 
+
+
+
+    public function updateMember(Request $request)
+    {
+
+        if ($request->isMethod('post')) {
+
+        $validatedData = $request->validate([
+
+            'id' => 'required|string',
+            'name' => 'required|string',
+            'email' => 'required|string',
+            'phone' => 'required|string',
+            'ref' => 'required|string',
+            'deposit' => 'required|string',
+            'roi' => 'required|string'
+    
+          
+         
+        ]);
+
+       
+
+
+    
+        // Create a new user record in the database
+
+
+            $user = Members::find($validatedData['id']);
+            $user->name = $validatedData['name'];
+            $user->email = $validatedData['email'];
+            $user->phone = $validatedData['phone'];
+            $user->ref_balance = $validatedData['ref'];
+            $user->deposit_balance = $validatedData['deposit'];
+            $user->balance = $validatedData['roi'];
+
+            if($user->save()){
+
+                session()->flash('success', 'user has been successfully updated');
+    
+                return redirect()->route('admin_view_user', ['id' => $user->id]);
+    
+
+
+
+            }
+            
+           
+           
+           // 'plan' => $validatedData['plan'],
+             
+          
+        
+      
+        } else {
+            // For the GET request (rendering the form)
+            return view('admin.view_user'); // Assuming 'plans' is the view for the form
+        }
+
+
+
+
+       
+    }
+
+
+
+
+    public function searchMember(Request $request)
+    {
+
+        if ($request->isMethod('post')) {
+
+        $validatedData = $request->validate([
+
+          
+            'term' => 'required|string',
+            
+      
+         
+        ]);
+
+       
+
+
+    
+        // Create a new user record in the database
+
+        $term = $validatedData['term'];
+
+
+        $users = Members::where(function($query) use ($term) {
+            $query->where('email', 'LIKE', "%$term%")
+                  ->orWhere('name', 'LIKE', "%$term%");
+        })->get();
+
+            if(count($users)>0){
+
+                session()->flash('success', 'user has been successfully retrieved');
+    
+                return view('admin.users', ['users' => $users]);
+    
+
+
+
+            }
+            else{
+
+                session()->flash('success', 'No user was found');
+    
+                return view('admin.users', ['users' => $users]);
+    
+
+
+            }
+           
+           
+           // 'plan' => $validatedData['plan'],
+             
+          
+        
+      
+        } else {
+            // For the GET request (rendering the form)
+            return view('admin.view_user'); // Assuming 'plans' is the view for the form
+        }
+
+
+
+
+       
+    }
+
+
+
+
     public function login(Request $request){
 
 
